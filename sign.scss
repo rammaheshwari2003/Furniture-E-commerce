@@ -1,0 +1,268 @@
+// @import "mixin";
+// @import "variable";
+// *{
+//     margin: 0px;
+//     padding: 0px;
+//     box-sizing: border-box
+// }
+// header{
+//     @include commanhead();
+//     height: 350px;
+//     nav ul{
+//             @include flex();
+//     }
+//     nav ul li h1{
+//         color:$SecondaryColor;
+//     }
+//     nav ul li a{
+//         color: $SecondaryColor; 
+//         text-decoration: none;
+//     }
+//   #shop{
+//         padding: 7%;
+//         font-size: 45px;
+//         color: white;
+//     }
+// }
+@import "mixin";
+@import "variable";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+#click{
+    display: none;
+}
+header{
+    @include commanhead();
+    
+    nav {
+    @include nav();
+    padding-right: 5%;
+    padding-left: 4%;
+    background-color: #3B5D50
+    }
+    nav ul{
+             @include flex();
+   
+    }
+    nav ul li h1{
+        color:$SecondaryColor;
+    }
+    nav ul li a{
+        color: $SecondaryColor;
+        text-decoration: none;
+        // padding-left: 100px;
+        margin-left: 20px;
+    }
+label{
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+#shop{
+            padding: 7%;
+            font-size: 45px;
+            color: white;
+         }
+}
+
+/* -- product -- */
+
+.product{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    background-color:#eff3ef;
+    text-align: center;
+    // height: 700px;
+
+    img{
+    width: 80%;
+    }
+}
+
+/* -- footer -- */ 
+
+footer{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #ffffff;
+
+     .sub-new{
+         h3{
+             font-size: 25px;
+         }
+         input{
+             padding: 15px 25px;
+             border-radius: 10px;
+             border: 1px solid #6A6A6A;
+             margin: 5px;
+             background-color: #ffffff;
+         }
+         #icon{
+                 padding: 15px 30px;
+                 color: #ffffff;
+                 background-color: #3B5D50;
+                 border-radius: 10px;
+                 margin: 5px;
+         }
+     }
+
+.foot-main{
+ display: flex;
+
+     .f-detail{
+ padding-top: 10%;
+ color: #3B5D50;
+ width: 65%;
+ p{
+     padding-top: 7%;
+     line-height: 2;
+ }
+ .icons{
+     padding-top: 5%;
+     // background-color: #eff3ef;
+     font-size: 15px;
+     #face{
+         background-color: #eff3ef;
+         border-radius: 50%;
+         width: 5%;
+         height: 12px;
+         padding: 4px; 
+     }
+     #twitter{
+         background-color: #eff3ef;
+         border-radius: 50%;
+         padding: 3px; 
+     }
+     #insta{
+         background-color: #eff3ef;
+         border-radius: 50%;
+         padding: 4px; 
+         width: 5%;
+     }
+     #lin{
+         background-color: #eff3ef;
+         border-radius: 50%;
+         padding: 4px; 
+         width: 6%;
+     }
+ }
+
+} 
+.f-title{
+ display: flex;
+ padding-top: 15%;
+ padding-left: 10%;
+ width: 100%;
+ line-height: 2.2;
+ color: #2F2F2F;
+ 
+ .foot-container{
+     width: 50%;
+     ul li{
+         list-style: none;
+     }
+ }
+} 
+ 
+}
+.foot-end{
+ display: flex;
+ .c-right{
+     width: 50%;
+ p{
+     color: #3B5D50;
+ }
+ span{
+     color: #2F2F2F;
+ }
+}
+.condition{
+ width: 80%;
+ ul{
+ display: flex;
+ justify-content: end;
+ gap: 5%;
+
+ li{
+     list-style: none;
+
+     a{
+         text-decoration: none;
+         color: #2F2F2F;
+     }
+ }
+
+ }
+ 
+}
+}
+}
+
+@media screen and (max-width: 768px) {
+    
+header{
+    label{
+        display: block;
+    }
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0px;
+        display: none;
+        width: 100%;
+        background-color: #3B5D50;
+        line-height: 2;
+    }
+}
+#click:checked ~  header{
+    nav ul{
+        display: block;
+    }
+}
+
+.product{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* -- footer -- */
+
+footer{
+    width: 100%;
+    height: auto;
+    .foot-main{
+        display: grid;
+        // width: 160%;
+        width: 600px;
+        font-size: 20px;
+    }
+
+    .f-title{
+        width: 10%;
+    }
+}
+
+}
+
+@media screen and (max-width: 426px) {
+    footer{
+        .foot-main{
+        .f-title{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            width: 80%;
+        }
+    }
+    }
+}
