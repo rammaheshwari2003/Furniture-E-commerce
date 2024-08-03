@@ -29,6 +29,7 @@ header nav {
   padding-right: 5%;
   padding-left: 4%;
   background-color: #3B5D50;
+  position: fixed;
 }
 header nav ul {
   display: flex;
