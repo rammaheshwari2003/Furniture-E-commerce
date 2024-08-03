@@ -18,7 +18,8 @@ header{
     @include nav(); 
     padding-right: 5%;
     padding-left: 4%;
-    background-color: #3B5D50
+    background-color: #3B5D50;
+    position: fixed
     }
     nav ul{
              @include flex();
